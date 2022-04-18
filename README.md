@@ -25,9 +25,9 @@ This contains the directions for adding a new type.
 
 There are some general guidelines.
 
-#### Create a tools file for your imports
+#### Create a tools file for your imports (optional)
 
-If you have dependencies to import, create a tools file with a blank identifier for the imports you need.
+If you have dependencies to import, and are in a Go module, create a tools file with a blank identifier for the imports you need. I did this for ease of versioning and laziness.
 
 ```go
 // +build tools
