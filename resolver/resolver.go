@@ -1,6 +1,7 @@
 package resolver
 
 import (
+	"github.com/jncmaguire/example-proto-custom-resolver/pet"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/reflect/protoregistry"
 )
@@ -12,7 +13,10 @@ func New() (*protoregistry.Types, error) {
 	)
 
 	// Add your messages to this list
-	for _, message := range []proto.Message{} {
+	for _, message := range []proto.Message{
+		new(pet.Blank),
+		new(pet.Pet),
+	} {
 
 		pr := message.ProtoReflect()
 
