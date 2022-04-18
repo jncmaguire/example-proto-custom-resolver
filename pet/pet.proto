@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package pet;
+
+option go_package = "github.com/jncmaguire/example-proto-custom-resolver/pet";
+
+import "github.com/jncmaguire/example-proto-types/taxonomy.proto";
+import "google/protobuf/timestamp.proto";
+
+message Blank {} // Here for testing purposes
+
+message Animal {
+    taxonomy.Classification classification = 1;
+    repeated string names = 2;
+}
+
+message Pet {
+    string name = 1;
+    google.protobuf.Timestamp date_of_birth = 2;
+    Animal animal = 3; // Message
+    repeated Animal friends = 4; // List
+    map<string, Animal> parents = 5; // Map
+}

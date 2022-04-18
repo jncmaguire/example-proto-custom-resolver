@@ -1,6 +1,7 @@
 cd $1
 
-go mod vendor
+
+go mod vendor # only useful if generated code accessible by Build Tools imports
 
 protoc \
 -I . \
@@ -11,4 +12,4 @@ protoc \
 --go-grpc_opt=paths=source_relative \
 $1.proto
 
-rm -r vendor
+rm -rf vendor
