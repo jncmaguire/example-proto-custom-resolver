@@ -1,4 +1,4 @@
-module github.com/jncmaguire/example-proto-custom-resolver
+module github.com/jncmaguire/example-proto-custom-resolver/resolver
 
 go 1.17
 
