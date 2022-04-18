@@ -1,21 +1,10 @@
 # Example: Proto Custom Resolver
 
-This is a repository holding exploratory code given the following niche requirements:
-
-* JSON objects must originate from proto messages
-* JSON objects should be deserialized back into their proto types for use in code
-* The place in which they will be used in the code will take various types of proto types.
-* The consumer and the multiple producers of the proto types are maintained by different groups and intentionally decoupled.
-
-As such, this solution provides the following:
-* Semi-independent yet centralized message management with Go submodules
-* A centralized resolver
-
-As a major caveat, the generic nature of consumption in itself goes against the high specificity intended for protobufs (at least to me). But it was fun to write, so here it is.
+This is a repository holding exploratory code given the following niche requirements / whims mentioned in [example-proto-any-json](https://github.com/jncmaguire/example-proto-any-json).
 
 ## Adding a new type
 
-This contains the directions for adding a new type.
+This contains the directions for adding a new type. An example PR is also [here](https://github.com/jncmaguire/example-proto-custom-resolver/pull/1).
 
 ### Make a submodule for your collection
 
